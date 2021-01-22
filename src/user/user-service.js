@@ -12,7 +12,7 @@ const UserService = {
   insertUser(db, newUser) {
     return db
       .insert(newUser)
-      .into('user')
+      .into('person')
       .returning('*')
       .then(([user]) => user)
   },
